@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Title</title>
+
+  <style>
+    .spinner {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      vertical-align: text-bottom;
+      display: none;
+      vertical-align: text-bottom;
+      border: 0.25em solid currentColor;
+      border-right-color: transparent;
+      animation: spinner-border 0.75s linear infinite;
+    }
+
+    @keyframes spinner-border {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My Header</h1>
+  <a href="...link" id="link">
+    <span class="spinner"></span>
+    <span>My Link</span>
+  </a>
+
+  <script>
+    const link = document.getElementById('link');
+    link.href = 'https://www.google.com';
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector('.spinner').style.display = 'inline-block';
+
+      setTimeout(function () {
+        document.querySelector('.spinner').style.display = 'none';
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>

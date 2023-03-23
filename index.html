@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="button" onclick="change()">Click Me</button>
+
+  <p id="text">Hello World</p>
+
+  <script>
+    const change = () => {
+      const text = document.getElementById('text');
+      text.innerHTML = 'This is a new text';
+    }
+  </script>
+</body>
+
+</html>
