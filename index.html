@@ -9,15 +9,22 @@
 </head>
 
 <body>
-  <button id="button" onclick="change()">Click Me</button>
-
   <p id="text">Hello World</p>
+  <button id="button">Click Me</button>
+
 
   <script>
-    const change = () => {
+    const button = document.getElementById('button');
+
+    button.addEventListener('click', () => {
       const text = document.getElementById('text');
       text.innerHTML = 'This is a new text';
-    }
+    });
+
+    button.addEventListener('dblclick', () => {
+      const button = document.getElementById('button');
+      button.style.backgroundColor = 'red';
+    });
   </script>
 </body>
 
