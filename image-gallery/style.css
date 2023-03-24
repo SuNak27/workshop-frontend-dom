@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+body {
+    background-color: #ccc;
+    text-align: center;
+}
+
+img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.container {
+    width: 600px;
+    margin: 10px auto;
+    border: 5px solid white;
+    overflow: auto;
+}
+
+.thumb {
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    float: left;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.thumb:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  animation: fade 1s forwards;
+}
+
+.active {
+    opacity: 0.5;
+    border: 2px solid red;
+}
